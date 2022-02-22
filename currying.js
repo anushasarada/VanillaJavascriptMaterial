@@ -18,7 +18,7 @@ multiplyByThree(5); // 15
 let multiplyWithVar = multiply.bind(this, 2, 3); //Ignore this i.e., 5 and multiplies last 2 parameters i.e., 2 & 3
 multiplyWithVar(5); // 6
 
-//Currying using closure
+//Currying using closure : simple variable
 let mul = function(x){
     return function(y){
         console.log(x * y)
@@ -28,6 +28,7 @@ let mul = function(x){
 let mulByTwo = mul(2);
 mulByTwo(3); // 6
 
+//Currying using closure : function
 function curry(f) { // curry(f) does the currying transform
     return function(a) {
       return function(b) {
