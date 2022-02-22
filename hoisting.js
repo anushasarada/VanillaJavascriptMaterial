@@ -5,7 +5,7 @@ Hoisting:
 
 getName(); // This is your Name
 console.log(getName); // Prints the entire function
-console.log(x); // undefined : If x i defined later, Error : If x is not defined anywhere
+console.log(x); // undefined : If x is defined later, Error : If x is not defined anywhere
 
 var x = 7;
 

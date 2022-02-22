@@ -1,6 +1,7 @@
 /*
 Currying:
 1. Make a copy of the method and create more methods out of it by pre-setting some arguments inside the function
+2. Currying doesn't call a function. It just transforms it.
 */
 
 //Currying using bind
@@ -26,3 +27,20 @@ let mul = function(x){
 
 let mulByTwo = mul(2);
 mulByTwo(3); // 6
+
+function curry(f) { // curry(f) does the currying transform
+    return function(a) {
+      return function(b) {
+        return f(a, b);
+      };
+    };
+  }
+  
+  // usage
+  function sum(a, b) {
+    return a + b;
+  }
+  
+  let curriedSum = curry(sum);
+  
+  console.log( curriedSum(1)(2) ); // 3
